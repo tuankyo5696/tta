@@ -1,0 +1,159 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid #009FA0;
+  align-items: center;
+  background: white;
+  position: fixed;
+  z-index: 10 ;
+  width:100%;
+  padding-top:40px;
+  div{
+    .logo{
+      padding-top: .5rem;
+      height: 60px;
+      width: 60px;
+      display: none;
+    }
+  }
+  div{
+    nav{
+      .top-nav{
+        //display: flex;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        flex-direction: row;
+        //width: 100vw;
+        .cover-nav-item{
+          div{
+            .nav-item{ //top-nav a
+              font-size: .9rem;
+              //margin-right: 1.3rem;
+              text-decoration: none;
+              color:#999999;
+              float: right;
+              display: block;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+              font-size: 17px;
+              border:none;
+              background-color: transparent;
+            }
+            .nav-item:hover{
+              color: #666666;
+            }
+            .active-nav-item{
+              color: #009FA0;
+            }
+          }
+        }
+        .nav-item-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.classLogo{
+  width: 0%;
+}
+.navbarItem{
+  width: 100%;
+}
+.nav{
+  div{
+    div{
+      a{
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+
+// .fixed-nav-bar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 9999;
+//   width: 100%;
+//   height: 50px;
+//   background-color: #00a087;
+// }
+
+
+.animate{
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  
+}
+////////////////////
+////////////////////
+
+@media (max-width:992px) {
+  .header div nav{
+    .top-nav {
+      flex-direction: column;
+      //width: 100vw;
+      .cover-nav-item{
+        div{
+          .nav-item{
+            display: none; 
+
+          }
+          .nav-item.responsive{
+            float: none;
+            display: block;
+            text-align: left;
+            
+          }
+        }
+  
+      }
+      .nav-item-icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+      }
+      .nav-item-icon.responsive {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 1rem;
+      }
+    }
+    .top-nav .responsive {
+      position: relative;
+      transition: 1s    ;
+      
+    }
+  } 
+  .header div .logo {
+    display: block;  
+  }
+  .header div .logo .responsive {
+    display: none;  
+  }
+  .classLogo{
+    width: 30%;
+  }
+  .classLogo.responsive{
+    width:0;
+  }
+  .navbarItem{
+    width: 70%;
+  }
+  .navbarItem.responsive{
+    width: 100%;
+  }
+  
+}
